@@ -1,0 +1,49 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    a{
+        text-decoration: none;
+    }
+    li{
+        list-style: none;
+    }
+   
+    font-family: 'Inter', sans-serif;
+font-family: 'Open Sans', sans-serif;
+}
+:root{
+    --color-black-popular :  #434a54;
+    --color-background : rgb(255, 255, 255);
+    --color-primari : #1bbc9b;
+    --color-text : #f3ebf0;
+    --height-navbar-top:50px;
+    --height__avatar : 30px;
+    --height-navbar-bottom:80px
+
+}
+@keyframes Fade-in{
+    from{
+       opacity: 0;
+    }
+    to{
+       opacity: 1;
+    }
+}
+@keyframes kenburns-top {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateY(-15px);
+              transform: scale(1.25) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+             
+    }
+  }
