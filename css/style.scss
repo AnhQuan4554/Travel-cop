@@ -505,7 +505,7 @@ overflow: hidden;
 
 .background__seach-bottom,.background__seach-bottom--active{
     position: absolute;
-    //height: 80px;
+    z-index: 2;
     min-height: 80px;
     top: 77%;
    left: 13.6%;
@@ -547,8 +547,28 @@ overflow: hidden;
                     color: #99999b;
                    
                 }
-
+                &:focus~.listChose{
+                    display: block;
+                }
           
+            }
+            //phần lựa chọn
+           
+            .listChose{
+                
+                display: none;
+                width: 100%;
+                top: 0%;
+                left: 0;
+                position: relative;
+                z-index: 3;
+                background-color: var(--color-black-popular);
+                .listItem{
+                    &:hover{
+                        color: #fff;
+                        background-color: #1bbc9b;
+                    }
+                }
             }
         
         }
@@ -880,9 +900,12 @@ overflow: hidden;
 
 
 /* start Packeges */
+.Packages-catagory-products{
+    display: flex;
+}
 .Packages{
     margin-top: 60px;
-    margin-bottom: 2000px;
+    margin-bottom: 76px;
     .Packages-head{
         text-align: center;
         display: block;
@@ -940,6 +963,8 @@ overflow: hidden;
     .Packages-catagory-input-list{
         text-align: center;
         .Packages-catagory-input-iteam{
+            color: #ccc;
+            padding-left: 20px;
             width: 100%;
             background-color: #4a515b;
           height: 40px;
@@ -950,7 +975,6 @@ overflow: hidden;
                 height: 160px;
             }
           &::placeholder{
-               padding-left: 14px;
                color: #898780;
             }
         }
@@ -965,6 +989,169 @@ overflow: hidden;
             font-size: 16px;
             border: none;
             cursor: pointer;
+        }
+    }
+}
+
+
+.Packages-products{
+    --height-Packages-products: 200px;
+    margin-bottom: 30px;
+    position: relative;
+   // height: var(--height-Packages-products);
+    min-height: var(--height-Packages-products);
+   
+    display: flex;
+    .Packages-products-img{
+        flex: 1;
+        img{
+           height: 100%;
+           width: 100%;
+           object-fit: fill;
+       }
+    }
+    
+    .Packages-products-content{
+        width: 436px;
+        color: #92928d;
+        .Packages-products-content-name{
+            background-color: #f9f9f9;
+            --height-Packages-products-content-name: 60px;
+            height: var(--height-Packages-products-content-name);
+            line-height: var(--height-Packages-products-content-name);
+            padding: 0 20px;
+        }
+        .Packages-products-content-reviw{
+            padding: 0 20px;
+            height: calc(var(--height-Packages-products) - var(--height-Packages-products-content-name) );
+            height: calc(var(--height-Packages-products) -  60px);
+            padding: 20px;
+            background-color: white;
+        }
+    }
+    .Packages-products-price{
+        color: #fff;
+        padding: 30px 20px;
+        text-align: center;
+        background-color: #f3a46b;
+        width: 172px;
+        h2{
+            margin-bottom: 26px;
+            font-weight: 400;
+            font-size: 2em;
+            cursor: pointer;
+        }
+        .btn-details{
+            outline: #fff;
+            width: 100px;
+            height: 40px;
+            outline: none;
+            border: 2px solid #fff;
+            background-color: transparent;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+    }
+}
+
+//foot
+.foot{
+    padding: 0 20px;
+    background-color: var(--color-black-popular);
+    min-height: 220px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span{
+        display: block;
+    }
+    .phoneSuport{
+        margin-bottom: calc(220px / 2);
+        transform: translateY(50%);
+        .phoneSuport-tiltle{
+            color: #fff;
+            font-size: 25px;
+            font-weight: 100;
+            margin-bottom: 4px;
+            
+        }
+        .phoneSuport-iteam1{
+            color: rgb(167, 165, 165);
+            font-size: 12px;
+        }
+        .phoneSuport-iteam2{
+            margin-top: 16px;
+            color: #fff;
+            font-size: 24px;
+        }
+    }
+    .connectWith{
+        margin-bottom: calc(220px / 2);
+        transform: translateY(50%);
+        .connectWith-tiltle{
+            font-size: 25px;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .connectWith--1{
+            color: rgb(167, 165, 165);
+            font-size: 12px;
+        }
+        .connectWith-listIcon{
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+         .connectWith-iteam-icon{
+                font-size: 30px;
+                color: #fff;
+                opacity: .7;
+                transition: all .3s;
+                cursor: pointer;
+                &:hover{
+                    opacity: 1;
+                }
+         }   
+
+        }
+    }
+    .newLetter{
+        margin-bottom: calc(220px / 2);
+        transform: translateY(50%);
+        .newLetter-title{
+            font-size: 26px;
+            color: #fff;
+            margin-bottom: 4px;
+
+        }
+        .newLetter--1{
+            color: rgb(167, 165, 165);
+            font-size: 12px;
+        }
+        .newLetter-submit{
+            margin-top: 16px;
+            input{
+                padding: 8px 20px 8px 20px;
+                outline: none;
+                background:#474e58;
+                border: 2px solid #474e58;
+                color: #fff;
+                &::placeholder{
+                    font-size: 16px;
+                }
+            }
+            button{
+                background-color: var(--color-primari);
+                border: none;
+                padding: 10px 20px 10px 20px;
+                text-align: center;
+                margin-left: -4px;
+                color: #fff;
+            }
+                
         }
     }
 }
