@@ -64,12 +64,41 @@
     }
 
 
-    
+    // phần packed khi thành tablet thì nó sẽ cách cái thẻ bán hàng 
+    .Packages-catagory{
+        margin-bottom: 30px;
+
+    }
+    .Packages-products{
+        display: block;
+        .Packages-products-content{
+            width: 100%;
+            border: solid 1px rgb(216, 213, 213);   
+            border-top: none;         
+        }
+        .Packages-products-price{
+            padding: 0;
+            bottom: 0%;
+            margin-left: 20px;
+            width: 100px;
+            height: 40px;
+        position: absolute;
+        h2{
+            margin:0;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 44px;
+        }
+            .btn-details{
+           display: none;
+            }
+        }
+    }
 }
 
 //tablet
 @media ( min-width:740px)and (max-width:1023px){
- 
+
 }
 
 //mobile
